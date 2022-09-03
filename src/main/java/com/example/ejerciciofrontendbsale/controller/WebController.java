@@ -20,7 +20,7 @@ public class WebController {
         model.addAttribute("categoriaActual", -1);
         model.addAttribute("categorias", restTemplateProvider.categoriasDesdeApi());
         model.addAttribute("productos", restTemplateProvider.productosDesdeApi());
-        return "/index";
+        return "index";
     }
 
     /*
@@ -33,7 +33,7 @@ public class WebController {
         model.addAttribute("categoriaActual", id);
         model.addAttribute("categorias", restTemplateProvider.categoriasDesdeApi());
         model.addAttribute("productos", restTemplateProvider.productosPorCategoriaDesdeApi(id));
-        return "/index";
+        return "index";
     }
 
     /*
@@ -50,7 +50,7 @@ public class WebController {
             model.addAttribute("categorias", restTemplateProvider.categoriasDesdeApi());
             model.addAttribute("productos", restTemplateProvider.productosPorNombreDesdeApi(texto));
             model.addAttribute("busquedaAnterior", texto);
-            return "/index";
+            return "index";
         }
     }
 }
