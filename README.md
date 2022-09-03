@@ -24,4 +24,4 @@ o por parte de este.
 * La página de inicio muestra todos los productos disponibles.
 
 ## Despliegue del proyecto
-El proyecto se encuentra desplegado en Heroku.
+El proyecto se encuentra desplegado en [Heroku](https://bsale-store-test-frontend.herokuapp.com/).
