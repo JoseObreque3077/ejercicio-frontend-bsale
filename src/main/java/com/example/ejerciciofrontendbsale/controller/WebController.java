@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class WebController {
-
+    //Recibe una petición GET y devuelve la página de inicio mostrando todos los productos disponibles.
     @GetMapping("/")
     public String inicio(Model model) {
         RestTemplateProvider restTemplateProvider = new RestTemplateProvider();
@@ -23,6 +23,10 @@ public class WebController {
         return "/index";
     }
 
+    /*
+    Recibe una petición GET y devuelve la página de la categoría correspondiente, mostrando todos los productos de
+    dicha categoría.
+     */
     @GetMapping("/categoria/{id}")
     public String filtroPorCategoria(Model model, @PathVariable int id) {
         RestTemplateProvider restTemplateProvider = new RestTemplateProvider();
@@ -32,6 +36,10 @@ public class WebController {
         return "/index";
     }
 
+    /*
+    Recibe una petición POST con el texto a buscar y devuelve a la página con los productos filtrados (en base al
+    campo de nombre de producto).
+     */
     @PostMapping("/buscar")
     public String filtroPorNombre(@RequestParam("campoBusqueda") String texto, Model model) {
         RestTemplateProvider restTemplateProvider = new RestTemplateProvider();
